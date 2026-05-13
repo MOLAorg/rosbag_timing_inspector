@@ -83,7 +83,7 @@ ament_target_dependencies(rosbag_timing_inspector
 )
 
 install(TARGETS rosbag_timing_inspector
-  DESTINATION lib/${PROJECT_NAME}
+  DESTINATION bin
 )
 
 ament_package()
