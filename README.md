@@ -6,7 +6,7 @@ Built with [Dear ImGui](https://github.com/ocornut/imgui) + [ImPlot](https://git
 No message deserialization is performed -- only timestamps and topic names are read,
 so it opens even bags with custom or unavailable message types.
 
-<img width="1398" height="855" alt="rosbag_timing_inspector" src="https://github.com/user-attachments/assets/e4bd15a9-e681-4194-ae0c-cca8095bcddb" />
+<img width="1009" height="557" alt="rosbag_timing_inspector" src="https://github.com/user-attachments/assets/e527bbd3-4e0e-424c-9500-ed6708bb2885" />
 
 
 ## Features
