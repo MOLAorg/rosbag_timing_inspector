@@ -82,6 +82,15 @@ ament_target_dependencies(rosbag_timing_inspector
   rosbag2_storage
 )
 
+# Pass the rosbag2_storage version as a compile definition so BagReader.cpp
+# can use #if to select the correct timestamp field name.
+# recv_timestamp was introduced in rosbag2 0.17.0 (Iron / ROS 2 >= Iron).
+# Humble shipped 0.15.x and uses the old `time_stamp` field name.
+target_compile_definitions(rosbag_timing_inspector PRIVATE
+  ROSBAG2_STORAGE_VERSION_MAJOR=${rosbag2_storage_VERSION_MAJOR}
+  ROSBAG2_STORAGE_VERSION_MINOR=${rosbag2_storage_VERSION_MINOR}
+)
+
 install(TARGETS rosbag_timing_inspector
   DESTINATION bin
 )

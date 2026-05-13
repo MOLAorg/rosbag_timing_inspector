@@ -5,27 +5,32 @@
  */
 #pragma once
 
-#include "TimingData.hpp"
+#include <memory>
 #include <string>
+#include <thread>
 #include <vector>
+
+#include "BagReader.hpp"
+#include "TimingData.hpp"
 
 // Per-topic display state
 struct TopicDisplayState
 {
-    bool    visible       = true;
-    float   color[4]      = {1.0f, 1.0f, 1.0f, 1.0f};
-    // X data for scatter (time in seconds from bag start)
-    std::vector<double> xs;
-    // Y data for scatter (constant = topic index, used as lane)
-    std::vector<double> ys;
+  bool  visible  = true;
+  float color[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+  // X data for scatter (time in seconds from bag start)
+  std::vector<double> xs;
+  // Y data for scatter (constant = topic index, used as lane)
+  std::vector<double> ys;
 };
 
 class BagInspectorApp
 {
    public:
     BagInspectorApp();
+    ~BagInspectorApp();
 
-    // Load a bag from file.  Can be called multiple times to reload.
+    // Kick off an async bag load.  Returns immediately; progress shown in GUI.
     void load_bag(const std::string& path);
 
     // Render one frame -- call inside the ImGui NewFrame / Render pair.
@@ -36,12 +41,18 @@ class BagInspectorApp
    private:
     void render_timeline_tab();
     void render_histograms_tab();
-    void render_stats_tab();
     void render_menu_bar();
+    void render_loading_modal();
     void rebuild_plot_data();
+    void finish_load();  // called once async thread is done
 
     BagTimingData m_data;
     std::vector<TopicDisplayState> m_topic_display;
+
+    // Async loading
+    std::thread                    m_load_thread;
+    std::unique_ptr<BagTimingData> m_pending_data;
+    std::unique_ptr<LoadProgress>  m_load_progress;
 
     // Measure tool state (timeline tab)
     bool   m_measure_active     = false;
