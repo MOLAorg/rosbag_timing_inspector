@@ -1,0 +1,23 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+# ---
+AlignAfterOpenBracket: AlwaysBreak # Values: Align, DontAlign, AlwaysBreak
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: false # Should be off, causes many dummy problems!!
+AllowShortBlocksOnASingleLine: false
+BreakBeforeBraces: Allman
+ColumnLimit: 100
+IndentCaseLabels: true
+IndentWidth: 2
+IndentWrappedFunctionNames: true
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+DerivePointerAlignment: false
+ReflowComments: true
+SortIncludes: true
+SpaceBeforeAssignmentOperators: true
+Standard: Cpp11
+TabWidth: 2
+UseTab: Never # Available options are Never, Always, ForIndentation
