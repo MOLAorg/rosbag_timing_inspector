@@ -29,8 +29,11 @@ ROS 2 packages resolved automatically by `rosdep`:
 
 - `rosbag2_cpp`
 - `rosbag2_storage`
-- `rosbag2_storage_mcap`
-- `rosbag2_storage_sqlite3`
+
+Storage backend plugins (installed with a typical ROS 2 desktop install):
+
+- `rosbag2_storage_mcap` — for `.mcap` bags
+- `rosbag2_storage_sqlite3` — for `.db3` bags
 
 Third-party libraries (`imgui`, `implot`, `tinyfiledialogs`) are fetched automatically
 by CMake via `FetchContent` at build time -- no manual installation needed.
