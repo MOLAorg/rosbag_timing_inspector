@@ -73,6 +73,14 @@ rosbag_timing_inspector
 | Measure delta-T | Enable **Measure mode**, click for T1, click again for T2; drag either line to adjust |
 | Reset measurement | Click a third time to restart |
 
+## ROS build farm status
+
+| Distro | Develop branch | Releases | Stable release |
+| ---    | ---            | ---      |  ---      |
+| ROS 2 Jazzy @ u24.04 | [![Build Status](https://build.ros2.org/job/Jdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Jdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Jbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Jbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Jbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/jazzy/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
+| ROS 2 Kilted @ u24.04 | [![Build Status](https://build.ros2.org/job/Kdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Kdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Kbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Kbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Kbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/kilted/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
+| ROS 2 Rolling (u24.04) | [![Build Status](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Rbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Rbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Rbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/rolling/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
+
 ## License
 
 MIT -- Copyright (C) 2026 Jose Luis Blanco Claraco
