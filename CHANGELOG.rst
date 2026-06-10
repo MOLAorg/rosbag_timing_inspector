@@ -2,8 +2,8 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2026-06-10)
+------------------
 * fix: add opengl and libglfw3-dev as build dependencies
   Required by the ImGui/ImPlot renderer but missing from package.xml,
   causing ROS build farm failures (CMake could not find OpenGL/GLFW).
