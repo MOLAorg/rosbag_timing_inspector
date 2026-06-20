@@ -2,6 +2,11 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix: avoid deprecated ament_target_dependencies()
+* Contributors: Jose Luis Blanco Claraco
+
 1.0.1 (2026-06-20)
 ------------------
 * fix: vendor imgui, implot and tinyfiledialogs as git submodules
