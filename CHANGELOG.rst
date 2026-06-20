@@ -2,8 +2,8 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.1 (2026-06-20)
+------------------
 * fix: vendor imgui, implot and tinyfiledialogs as git submodules
   Replace FetchContent live git clones with pinned submodules under
   third_party/, so the package no longer depends on network access
