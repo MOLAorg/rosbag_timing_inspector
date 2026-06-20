@@ -2,8 +2,8 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.2 (2026-06-21)
+------------------
 * fix: avoid deprecated ament_target_dependencies()
 * Contributors: Jose Luis Blanco Claraco
 
