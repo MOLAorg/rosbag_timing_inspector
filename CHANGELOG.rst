@@ -2,6 +2,15 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix: vendor imgui, implot and tinyfiledialogs as git submodules
+  Replace FetchContent live git clones with pinned submodules under
+  third_party/, so the package no longer depends on network access
+  during the CMake configure step of a build.
+* docs: add ROS 2 Lyrical badge row, update Rolling to Ubuntu 26.04 (resolute)
+* Contributors: Jose Luis Blanco-Claraco
+
 1.0.0 (2026-06-10)
 ------------------
 * fix: add opengl and libglfw3-dev as build dependencies
