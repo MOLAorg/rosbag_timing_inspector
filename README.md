@@ -35,12 +35,18 @@ Storage backend plugins (installed with a typical ROS 2 desktop install):
 - `rosbag2_storage_mcap` — for `.mcap` bags
 - `rosbag2_storage_sqlite3` — for `.db3` bags
 
-Third-party libraries (`imgui`, `implot`, `tinyfiledialogs`) are fetched automatically
-by CMake via `FetchContent` at build time -- no manual installation needed.
+Third-party libraries (`imgui`, `implot`, `tinyfiledialogs`) are vendored as git
+submodules under `third_party/` -- no manual installation needed, but make sure
+submodules are checked out (see Build section below).
 
 ## Build
 
 ```bash
+cd ~/ros2_ws/src/rosbag_timing_inspector
+
+# Fetch the vendored third-party submodules (imgui, implot, tinyfiledialogs)
+git submodule update --init --recursive
+
 cd ~/ros2_ws
 
 # Install ROS 2 dependencies
