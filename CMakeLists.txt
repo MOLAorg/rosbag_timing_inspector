@@ -66,10 +66,8 @@ target_link_libraries(rosbag_timing_inspector
   tinyfd_lib
   OpenGL::GL
   glfw
-)
-ament_target_dependencies(rosbag_timing_inspector
-  rosbag2_cpp
-  rosbag2_storage
+  rosbag2_cpp::rosbag2_cpp
+  rosbag2_storage::rosbag2_storage
 )
 
 # Pass the rosbag2_storage version as a compile definition so BagReader.cpp
