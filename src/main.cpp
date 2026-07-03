@@ -48,6 +48,20 @@ int main(int argc, char** argv)
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
 
+    // Query UI scaling factor for high dpi monitors
+    float dpi_scaling_factor = 1.0;
+    {
+        GLFWmonitor *monitor = glfwGetPrimaryMonitor();
+        float xscale = 1.0;
+        float yscale = 1.0;
+        glfwGetMonitorContentScale(monitor, &xscale, &yscale);
+        if (xscale > 1 || yscale > 1)
+        {
+            dpi_scaling_factor = xscale;
+            glfwWindowHint(GLFW_SCALE_TO_MONITOR, GLFW_TRUE);
+        }
+    }
+
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImPlot::CreateContext();
@@ -56,6 +70,11 @@ int main(int argc, char** argv)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
     ImGui::StyleColorsDark();
+    // Apply dpi scaling factor to ImGui style and default font
+    ImGui::GetStyle().ScaleAllSizes(dpi_scaling_factor);
+    ImFontConfig config;
+    config.SizePixels = 13.0f * dpi_scaling_factor;
+    ImGui::GetIO().Fonts->AddFontDefault(&config);
 
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(glsl_version);
@@ -65,6 +84,8 @@ int main(int argc, char** argv)
     {
         app.load_bag(initial_bag_path);
     }
+
+    app.set_dpi_scaling_factor(dpi_scaling_factor);
 
     while (!glfwWindowShouldClose(window) && !app.wants_quit())
     {

@@ -210,7 +210,7 @@ void BagInspectorApp::render_timeline_tab()
     const size_t n_topics = m_data.topics.size();
 
     // Left panel: topic list with visibility toggles
-    ImGui::BeginChild("topic_list", ImVec2(220, 0), ImGuiChildFlags_Border);
+    ImGui::BeginChild("topic_list", ImVec2(220 * m_dpi_scaling_factor, 0), ImGuiChildFlags_Border);
     ImGui::Text("Topics (%zu)", n_topics);
     ImGui::Separator();
 
