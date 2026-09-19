@@ -35,12 +35,18 @@ Storage backend plugins (installed with a typical ROS 2 desktop install):
 - `rosbag2_storage_mcap` — for `.mcap` bags
 - `rosbag2_storage_sqlite3` — for `.db3` bags
 
-Third-party libraries (`imgui`, `implot`, `tinyfiledialogs`) are fetched automatically
-by CMake via `FetchContent` at build time -- no manual installation needed.
+Third-party libraries (`imgui`, `implot`, `tinyfiledialogs`) are vendored as git
+submodules under `third_party/` -- no manual installation needed, but make sure
+submodules are checked out (see Build section below).
 
 ## Build
 
 ```bash
+cd ~/ros2_ws/src/rosbag_timing_inspector
+
+# Fetch the vendored third-party submodules (imgui, implot, tinyfiledialogs)
+git submodule update --init --recursive
+
 cd ~/ros2_ws
 
 # Install ROS 2 dependencies
@@ -84,7 +90,7 @@ rosbag_timing_inspector
 | ROS 2 Jazzy @ u24.04 | [![Build Status](https://build.ros2.org/job/Jdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Jdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Jbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Jbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Jbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/jazzy/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
 | ROS 2 Kilted @ u24.04 | [![Build Status](https://build.ros2.org/job/Kdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Kdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Kbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Kbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Kbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/kilted/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
 | ROS 2 Lyrical @ u26.04 | [![Build Status](https://build.ros2.org/job/Ldev__rosbag_timing_inspector__ubuntu_resolute_amd64/badge/icon)](https://build.ros2.org/job/Ldev__rosbag_timing_inspector__ubuntu_resolute_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Lbin_uR64__rosbag_timing_inspector__ubuntu_resolute_amd64__binary/badge/icon)](https://build.ros2.org/job/Lbin_uR64__rosbag_timing_inspector__ubuntu_resolute_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Lbin_urv8_uRv8__rosbag_timing_inspector__ubuntu_resolute_arm64__binary/badge/icon)](https://build.ros2.org/job/Lbin_urv8_uRv8__rosbag_timing_inspector__ubuntu_resolute_arm64__binary/) | [![Version](https://img.shields.io/ros/v/lyrical/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
-| ROS 2 Rolling (u24.04) | [![Build Status](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_noble_amd64/badge/icon)](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_noble_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Rbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__rosbag_timing_inspector__ubuntu_noble_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Rbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/badge/icon)](https://build.ros2.org/job/Rbin_unv8_uNv8__rosbag_timing_inspector__ubuntu_noble_arm64__binary/) | [![Version](https://img.shields.io/ros/v/rolling/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
+| ROS 2 Rolling (u26.04) | [![Build Status](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_resolute_amd64/badge/icon)](https://build.ros2.org/job/Rdev__rosbag_timing_inspector__ubuntu_resolute_amd64/) | amd64 [![Build Status](https://build.ros2.org/job/Rbin_uR64__rosbag_timing_inspector__ubuntu_resolute_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uR64__rosbag_timing_inspector__ubuntu_resolute_amd64__binary/) <br> arm64 [![Build Status](https://build.ros2.org/job/Rbin_unv8_uRv8__rosbag_timing_inspector__ubuntu_resolute_arm64__binary/badge/icon)](https://build.ros2.org/job/Rbin_unv8_uRv8__rosbag_timing_inspector__ubuntu_resolute_arm64__binary/) | [![Version](https://img.shields.io/ros/v/rolling/rosbag_timing_inspector)](https://index.ros.org/?search_packages=true&pkgs=rosbag_timing_inspector) |
 
 ## License
 

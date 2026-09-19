@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>rosbag_timing_inspector</name>
-  <version>0.1.0</version>
+  <version>1.0.2</version>
   <description>
     GUI tool to visualize and analyze message timing from ROS2 bags (mcap or db3).
   </description>
@@ -15,8 +15,8 @@
 
   <depend>rosbag2_cpp</depend>
   <depend>rosbag2_storage</depend>
-  <exec_depend>rosbag2_storage_mcap</exec_depend>
-  <exec_depend>rosbag2_storage_sqlite3</exec_depend>
+  <depend>rosbag2_storage_mcap</depend>
+  <depend>rosbag2_storage_sqlite3</depend>
   <build_depend>opengl</build_depend>
   <build_depend>libglfw3-dev</build_depend>
 
