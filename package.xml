@@ -15,6 +15,8 @@
 
   <depend>rosbag2_cpp</depend>
   <depend>rosbag2_storage</depend>
+  <exec_depend>rosbag2_storage_mcap</exec_depend>
+  <exec_depend>rosbag2_storage_sqlite3</exec_depend>
   <build_depend>opengl</build_depend>
   <build_depend>libglfw3-dev</build_depend>
 
