@@ -38,6 +38,8 @@ class BagInspectorApp
 
     bool wants_quit() const { return m_wants_quit; }
 
+    void set_dpi_scaling_factor(float scaling_factor) { m_dpi_scaling_factor = scaling_factor; };
+
    private:
     void render_timeline_tab();
     void render_histograms_tab();
@@ -65,4 +67,6 @@ class BagInspectorApp
     bool        m_show_status_modal = false;
 
     bool m_wants_quit = false;
+
+    float m_dpi_scaling_factor = 1.0;
 };
