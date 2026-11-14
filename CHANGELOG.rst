@@ -2,6 +2,14 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Port to MRPT 3.x.
+* Scale the UI with the desktop scaling factor; handle systems without a monitor.
+* package.xml: fix build and runtime dependencies (OpenGL, GLFW, rosbag2 storage plugins).
+* README: ROS build farm status table.
+* Contributors: Jonas Otto, Jose Luis Blanco-Claraco
+
 1.0.2 (2026-06-21)
 ------------------
 * fix: avoid deprecated ament_target_dependencies()
