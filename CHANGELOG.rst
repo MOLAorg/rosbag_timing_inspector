@@ -2,6 +2,11 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* package.xml: Humble provides the sqlite3 storage plugin in rosbag2_storage_default_plugins
+* Contributors: Jose Luis Blanco-Claraco
+
 1.1.0 (2026-11-14)
 ------------------
 * Port to MRPT 3.x.
