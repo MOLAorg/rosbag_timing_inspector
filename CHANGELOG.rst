@@ -2,8 +2,8 @@
 Changelog for package rosbag_timing_inspector
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.0 (2026-11-14)
+------------------
 * Port to MRPT 3.x.
 * Scale the UI with the desktop scaling factor; handle systems without a monitor.
 * package.xml: fix build and runtime dependencies (OpenGL, GLFW, rosbag2 storage plugins).
