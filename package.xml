@@ -16,7 +16,9 @@
   <depend>rosbag2_cpp</depend>
   <depend>rosbag2_storage</depend>
   <depend>rosbag2_storage_mcap</depend>
-  <depend>rosbag2_storage_sqlite3</depend>
+  <depend condition="$ROS_DISTRO != humble">rosbag2_storage_sqlite3</depend>
+  <!-- In Humble, the sqlite3 storage plugin is part of the default plugins -->
+  <exec_depend condition="$ROS_DISTRO == humble">rosbag2_storage_default_plugins</exec_depend>
   <build_depend>opengl</build_depend>
   <build_depend>libglfw3-dev</build_depend>
 
